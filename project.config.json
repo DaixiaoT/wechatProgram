@@ -1,6 +1,9 @@
 {
-  "miniprogramRoot": "miniprogram/",
-  "cloudfunctionRoot": "cloudfunctions/",
+  "description": "项目配置文件",
+  "packOptions": {
+    "ignore": [],
+    "include": []
+  },
   "setting": {
     "urlCheck": true,
     "es6": true,
@@ -42,36 +45,9 @@
   "appid": "wx2185e7b768443c70",
   "projectname": "quickstart-wx-cloud",
   "libVersion": "2.14.1",
-  "cloudfunctionTemplateRoot": "cloudfunctionTemplate/",
-  "condition": {
-    "search": {
-      "list": []
-    },
-    "conversation": {
-      "list": []
-    },
-    "plugin": {
-      "list": []
-    },
-    "game": {
-      "list": []
-    },
-    "miniprogram": {
-      "list": [
-        {
-          "id": -1,
-          "name": "db guide",
-          "pathName": "pages/databaseGuide/databaseGuide"
-        }
-      ]
-    }
-  },
+  "condition": {},
   "srcMiniprogramRoot": "miniprogram/",
   "compileType": "miniprogram",
-  "packOptions": {
-    "ignore": [],
-    "include": []
-  },
   "editorSetting": {
     "tabIndent": "insertSpaces",
     "tabSize": 2
