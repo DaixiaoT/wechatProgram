@@ -1,12 +1,22 @@
 <!--pages/list/list.wxml-->
 
 <view>{{infomation}}</view>
-<image src="{{imgSrc}}" mode="widthFix"/>
+<image src="{{imgSrc}}" mode="widthFix" />
 <view>{{randomNum1>=5?'大于5':'小于5'}}</view>
 <view>{{randomNum2*100}}</view>
 
 <button type="primary" bindtap="btnTapHandler">按钮</button>
 <button type="primary" bindtap="btnAddHandler">+1</button>
 <button type="primary" bindtap="btnAddHandler2" data-info="{{2}}">+2</button>
-<input value="{{msg}}" type="text" bindinput="inputHandler"/>
+<input value="{{msg}}" type="text" bindinput="inputHandler" />
 
+<view wx:if="{{type===1}}">男</view>
+<view wx:elif="{{type===2}}">女</view>
+<view wx:else>保密</view>
+
+<block wx:if="{{true}}">
+  <view>view1</view>
+  <view>view2</view>
+</block>
+
+<view hidden="{{flag}}">条件为true时隐藏元素，否则显示</view>

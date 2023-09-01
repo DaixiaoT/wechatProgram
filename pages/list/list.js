@@ -10,7 +10,9 @@ Page({
       randomNum1:Math.random()*10,
       randomNum2:Math.random().toFixed(2),
       count:0,
-      msg:'你好'
+      msg:'你好',
+      type:1,
+      flag:true
   },
   //定义按钮的事件处理函数
   btnTapHandler(e){
