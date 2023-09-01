@@ -16,6 +16,7 @@ background-color: lightgreen;
   background-color: lightpink;
 }
 .container1{
-  display: flex;
-  justify-content: space-around;
+  border: solid 1px red;
+  width: 100px;
+  height: 120px;
 }
