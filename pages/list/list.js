@@ -9,7 +9,8 @@ Page({
       imgSrc:'/images/zjy.jpg',
       randomNum1:Math.random()*10,
       randomNum2:Math.random().toFixed(2),
-      count:0
+      count:0,
+      msg:'你好'
   },
   //定义按钮的事件处理函数
   btnTapHandler(e){
@@ -19,6 +20,19 @@ Page({
   btnAddHandler(){
     this.setData({
       count:this.data.count + 1
+    })
+  },
+  btnAddHandler2(e){
+    this.setData({
+      count:this.data.count + e.target.dataset.info
+    })
+  },
+  //输入框的事件处理函数
+  //文本框与数据同步
+  inputHandler(e){
+    // console.log(e.detail.value)
+    this.setData({
+      msg:e.detail.value
     })
   },
   /**
