@@ -1,2 +1,8 @@
 <!--pages/index/index.wxml-->
 <text>pages/index/index.wxml</text>
+<view>
+手机号支持长按选中效果
+<text selectable>13967663526</text>
+</view>
+
+<rich-text nodes="<h1 style='color:red'>标题</h1>"/>
