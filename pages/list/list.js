@@ -5,36 +5,42 @@ Page({
    * 页面的初始数据
    */
   data: {
-      infomation:'Hello World!',
-      imgSrc:'/images/zjy.jpg',
-      randomNum1:Math.random()*10,
-      randomNum2:Math.random().toFixed(2),
-      count:0,
-      msg:'你好',
-      type:1,
-      flag:true
+    infomation: 'Hello World!',
+    imgSrc: '/images/zjy.jpg',
+    randomNum1: Math.random() * 10,
+    randomNum2: Math.random().toFixed(2),
+    count: 0,
+    msg: '你好',
+    type: 1,
+    flag: true,
+    arr1: ['苹果', '华为', '小米'],
+    userList: [
+      { id: 1, name: '小红' },
+      { id: 2, name: '小黄' },
+      { id: 3, name: '小白' }
+    ]
   },
   //定义按钮的事件处理函数
-  btnTapHandler(e){
+  btnTapHandler(e) {
     console.log(e)
   },
   //加一按钮的点击事件处理函数
-  btnAddHandler(){
+  btnAddHandler() {
     this.setData({
-      count:this.data.count + 1
+      count: this.data.count + 1
     })
   },
-  btnAddHandler2(e){
+  btnAddHandler2(e) {
     this.setData({
-      count:this.data.count + e.target.dataset.info
+      count: this.data.count + e.target.dataset.info
     })
   },
   //输入框的事件处理函数
   //文本框与数据同步
-  inputHandler(e){
+  inputHandler(e) {
     // console.log(e.detail.value)
     this.setData({
-      msg:e.detail.value
+      msg: e.detail.value
     })
   },
   /**

@@ -20,3 +20,9 @@
 </block>
 
 <view hidden="{{flag}}">条件为true时隐藏元素，否则显示</view>
+
+<view wx:for="{{arr1}}">
+索引是{{index}},item是{{item}}
+</view>
+
+<view wx:for="{{userList}}" wx:key="id">{{item.name}}</view>
