@@ -1,2 +1,9 @@
 <!--pages/list/list.wxml-->
-<text>pages/list/list.wxml</text>
+
+<view>{{infomation}}</view>
+<image src="{{imgSrc}}" mode="widthFix"/>
+<view>{{randomNum1>=5?'大于5':'小于5'}}</view>
+<view>{{randomNum2*100}}</view>
+
+<button type="primary" bindtap="btnTapHandler">按钮</button>
+<button type="primary" bindtap="btnAddHandler">+1</button>

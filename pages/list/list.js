@@ -5,9 +5,22 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+      infomation:'Hello World!',
+      imgSrc:'/images/zjy.jpg',
+      randomNum1:Math.random()*10,
+      randomNum2:Math.random().toFixed(2),
+      count:0
   },
-
+  //定义按钮的事件处理函数
+  btnTapHandler(e){
+    console.log(e)
+  },
+  //加一按钮的点击事件处理函数
+  btnAddHandler(){
+    this.setData({
+      count:this.data.count + 1
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
