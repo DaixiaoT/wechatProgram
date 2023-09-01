@@ -1,2 +1,14 @@
 <!--pages/list/list.wxml-->
 <text>pages/list/list.wxml</text>
+
+<swiper class="swiper-container" indicator-dots indicator-color="white" autoplay="true" interval="2000" circular="true">
+  <swiper-item>
+    <view class="item">A</view>
+  </swiper-item>
+  <swiper-item>
+    <view class="item">B</view>
+  </swiper-item>
+  <swiper-item>
+    <view class="item">C</view>
+  </swiper-item>
+</swiper>
