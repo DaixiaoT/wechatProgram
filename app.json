@@ -1,8 +1,8 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/logs/logs",
-    "pages/list/list"
+    "pages/message/message",
+    "pages/contact/contact"
   ],
   "window": {
     "backgroundTextStyle": "dark",
@@ -17,11 +17,21 @@
     "list": [
       {
         "pagePath": "pages/index/index",
-        "text": "index"
+        "text": "首页",
+        "iconPath": "/images/index4.png",
+        "selectedIconPath": "/images/index2_select.png"
       },
       {
-        "pagePath": "pages/list/list",
-        "text": "list"
+        "pagePath": "pages/message/message",
+        "text": "信息",
+        "iconPath": "/images/message.png",
+        "selectedIconPath": "/images/message_select.png"
+      },
+      {
+        "pagePath": "pages/contact/contact",
+        "text": "我的",
+        "iconPath": "/images/me.png",
+        "selectedIconPath": "/images/me_select.png"
       }
     ]
   },
