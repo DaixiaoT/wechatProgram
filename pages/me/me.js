@@ -1,4 +1,4 @@
-// pages/index/index.js
+// pages/me/me.js
 Page({
 
   /**
@@ -7,41 +7,12 @@ Page({
   data: {
 
   },
-  //发起Get数据请求
-  getInfo() {
-    wx.request({
-      url: 'https://mock.presstime.cn/mock/64f2a6002b33b5907f433714/dxt/test',
-      method: 'GET',
-      data: {
-        name: 'dxt',
-        age: 30
-      },
-      success: (res) => {
-        console.log(res.data)
-      }
-    })
-  },
-  //发起post请求
-  postInfo() {
 
-    wx.request({
-      url: "https://mock.presstime.cn/mock/64f2a6002b33b5907f433714/dxt/test",
-      method: "POST",
-      data: {
-        name: "dxt",
-        age: 22
-      },
-      success:(res)=>{
-        console.log(res.data)
-      }
-    })
-  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-    this.getInfo()
-    this.postInfo()
+
   },
 
   /**
