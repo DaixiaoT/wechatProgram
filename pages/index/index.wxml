@@ -1,2 +1,22 @@
 <!--pages/index/index.wxml-->
 <text>pages/index/index.wxml</text>
+<!-- 声明式导航 -->
+<navigator url="/pages/search/search" open-type="switchTab">tapbar页面：导航到查询页面</navigator>
+
+<navigator url="/pages/list/list" open-type="navigate">非tapbar页面：导航到list页面</navigator>
+
+<!-- 编程式导航 -->
+<button bindtap="gotoMessage">跳转到search页面</button>
+<button bindtap="gotoList">跳转到list页面</button>
+
+
+
+
+
+
+
+
+
+
+
+

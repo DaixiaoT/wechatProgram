@@ -28,6 +28,19 @@ Page({
   onShow() {
 
   },
+  //通过编程式导航跳转到tabBar页面
+  gotoMessage(){
+    wx.switchTab({
+      url: '/pages/search/search',
+    })
+  },
+  //通过编程式导航跳转到list页面
+  gotoList(){
+    wx.navigateTo({
+      url: '/pages/list/list',
+    })
+  },
+
 
   /**
    * 生命周期函数--监听页面隐藏
