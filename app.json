@@ -1,14 +1,16 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/logs/logs",
-    "pages/list/list"
+    "pages/me/me",
+    "pages/search/search",
+    "pages/list/list",
+    "pages/logs/logs"
   ],
   "window": {
     "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#2b4b6b",
     "navigationBarTitleText": "DXTTTT",
-    "navigationBarTextStyle":"white",
+    "navigationBarTextStyle": "white",
     "enablePullDownRefresh": true,
     "backgroundColor": "#efefef",
     "onReachBottomDistance": 50
@@ -17,11 +19,21 @@
     "list": [
       {
         "pagePath": "pages/index/index",
-        "text": "index"
+        "text": "首页",
+        "iconPath": "/images/tabs/index.png",
+        "selectedIconPath": "/images/tabs/index-fill.png"
       },
       {
-        "pagePath": "pages/list/list",
-        "text": "list"
+        "pagePath": "pages/search/search",
+        "text": "查询",
+        "iconPath": "/images/tabs/search.png",
+        "selectedIconPath": "/images/tabs/search-fill.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "我的",
+        "iconPath": "/images/tabs/me.png",
+        "selectedIconPath": "/images/tabs/me-fill.png"
       }
     ]
   },
