@@ -1,2 +1,22 @@
 <!--pages/index/index.wxml-->
-<text>pages/index/index.wxml</text>
+
+<swiper indicator-dots indicator-color="white" circular>
+  <swiper-item wx:for="{{swiperList}}" wx:key="id">
+    <image src="{{item.image}}" mode=""/>
+  </swiper-item>
+</swiper>
+<!-- 九宫格区域 -->
+<view class="grid-list">
+  <view class="grid-item" wx:for="{{gridList}}" wx:key="{{id}}">
+    <image src="{{item.image}}" mode=""/>
+    <text>{{item.id}}</text>
+  </view>
+
+</view>
+
+<view class="img-box">
+  <image src="/images/index2.png" mode="widthFix"/>
+  <image src="/images/index1.png" mode="widthFix"/>
+</view>
+
+
