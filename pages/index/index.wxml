@@ -1,4 +1,3 @@
-<!--pages/index/index.wxml-->
 
 <swiper indicator-dots indicator-color="white" circular>
   <swiper-item wx:for="{{swiperList}}" wx:key="id">
@@ -7,10 +6,10 @@
 </swiper>
 <!-- 九宫格区域 -->
 <view class="grid-list">
-  <view class="grid-item" wx:for="{{gridList}}" wx:key="id">
+  <navigator class="grid-item" wx:for="{{gridList}}" wx:key="id" url="/pages/shoplist/shoplist?id={{item.id}}&title={{item.name}}">
     <image src="{{item.image}}" mode=""/>
-    <text>{{item.id}}</text>
-  </view>
+    <text>{{item.name}}</text>
+  </navigator>
 
 </view>
 
