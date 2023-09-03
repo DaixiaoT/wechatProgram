@@ -5,7 +5,33 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    colorList: [],
+    isloading: false
+  },
+  getColors() {
+    this.setData({
+      isloading: true
+    })
+    //展示loading效果
+    wx.showLoading({
+      title: '数据加载中',
+    })
+    wx.request({
+      url: 'https://mock.presstime.cn/mock/64f2a6002b33b5907f433714/dxt/color',
+      method: 'get',
+      success: ({ data: res }) => {
+        console.log(res)
+        this.setData({
+          colorList: [...this.data.colorList, ...res.data]
+        })
+      },
+      complete: () => {
+        wx.hideLoading()
+        this.setData({
+          isloading: false
+        })
+      }
+    })
   },
 
   /**
@@ -13,6 +39,7 @@ Page({
    */
   onLoad(options) {
 
+    this.getColors()
   },
 
   /**
@@ -47,14 +74,30 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh() {
-
+    wx.request({
+      url: 'https://mock.presstime.cn/mock/64f2a6002b33b5907f433714/dxt/color',
+      method: 'get',
+      success: ({ data: res }) => {
+        console.log(res)
+        this.setData({
+          colorList: [...res.data]
+        })
+      },
+      complete: () => {
+        wx.hideLoading()
+        this.setData({
+          isloading: false
+        })
+      }
+    })
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
   onReachBottom() {
-
+    if (this.data.isloading) return
+    this.getColors()
   },
 
   /**

@@ -7,7 +7,7 @@
 </swiper>
 <!-- 九宫格区域 -->
 <view class="grid-list">
-  <view class="grid-item" wx:for="{{gridList}}" wx:key="{{id}}">
+  <view class="grid-item" wx:for="{{gridList}}" wx:key="id">
     <image src="{{item.image}}" mode=""/>
     <text>{{item.id}}</text>
   </view>
