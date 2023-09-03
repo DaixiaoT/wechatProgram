@@ -1,2 +1,17 @@
 <!--pages/search/search.wxml-->
 <text>pages/search/search.wxml</text>
+
+<!-- 使用内嵌wxs脚本 -->
+<view>{{m1.toUpper(username)}}</view>
+<wxs module="m1">
+  module.exports.toUpper = function(str){
+    return str.toUpperCase()
+  }
+</wxs>
+
+<!-- 使用外联的wxs脚本 -->
+<view>{{m2.toLower(country)}}</view>
+
+<wxs src="../../utils/tools.wxs" module="m2"/>
+
+
