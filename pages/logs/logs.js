@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    count:0,
     query:{}
   },
 
@@ -16,6 +16,11 @@ Page({
     console.log(options)
     this.setData({
       query:options
+    })
+  },
+  AddCount(){
+    this.setData({
+      count:this.data.count+1
     })
   },
 
@@ -51,14 +56,17 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh() {
-
+    this.setData({
+      count:0
+    })
+    wx.stopPullDownRefresh()
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
   onReachBottom() {
-
+    console.log("触发了上拉触底事件")
   },
 
   /**

@@ -1,1 +1,6 @@
 /* pages/logs/logs.wxss */
+
+.box{
+  height: 2000rpx;
+  background-color: lightblue;
+}

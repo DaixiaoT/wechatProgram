@@ -1,2 +1,6 @@
 <!--pages/logs/logs.wxml-->
 <text>pages/logs/logs.wxml</text>
+<view>count值为：{{count}}</view>
+<button bind:tap="AddCount">+1</button>
+
+<view class="box"></view>
