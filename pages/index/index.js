@@ -40,6 +40,12 @@ Page({
       url: '/pages/list/list',
     })
   },
+  //编程式导航传参
+  gotoLogs(){
+    wx.navigateTo({
+      url: '/pages/logs/logs?name=dxt&age=55',
+    })
+  },
 
 
   /**

@@ -8,9 +8,10 @@
 <!-- 编程式导航 -->
 <button bindtap="gotoMessage">跳转到search页面</button>
 <button bindtap="gotoList">跳转到list页面</button>
-
-
-
+<!-- 声明式导航传参 -->
+<navigator url="/pages/logs/logs?name=dxt&age=20">跳转到logs页面</navigator>
+<!-- 编程式导航传参 -->
+<button bind:tap="gotoLogs">跳转到logs页面</button>
 
 
 
