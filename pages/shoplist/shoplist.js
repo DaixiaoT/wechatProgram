@@ -21,7 +21,7 @@ Page({
     })
     // 
     wx.request({
-      url: 'https://mock.presstime.cn/mock/64f2a6002b33b5907f433714/dxt/categories/' + this.data.query.id + '/shops',
+      url: 'https://mock.presstime.cn/mock/64f2a6002b33b5907f433714/linux/recommend/book/' + this.data.query.first + '/'+this.data.query.second,
       method: 'GET',
       data: {
         _page: this.data.page,

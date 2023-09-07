@@ -21,7 +21,7 @@
     <image src="{{item.image}}" mode=""/>
     <text>{{item.name}}</text>
   </navigator> -->
-  <navigator class="grid-item" url="">
+  <navigator class="grid-item" url="/wemark/wemark">
     <image src="/images/408.png" mode="" />
     <text>408计算机基础</text>
   </navigator>

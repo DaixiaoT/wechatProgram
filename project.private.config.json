@@ -5,6 +5,13 @@
       "list": [
         {
           "name": "",
+          "pathName": "pages/shoplist/shoplist",
+          "query": "first=1&second=2",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
           "pathName": "pages/linux/linux",
           "query": "",
           "launchMode": "default",
@@ -16,19 +23,12 @@
           "query": "",
           "launchMode": "default",
           "scene": null
-        },
-        {
-          "name": "",
-          "pathName": "pages/shoplist/shoplist",
-          "query": "id=1&title=张",
-          "launchMode": "default",
-          "scene": null
         }
       ]
     }
   },
   "setting": {
-    "urlCheck": true,
-    "compileHotReLoad": true
+    "urlCheck": false,
+    "compileHotReLoad": false
   }
 }

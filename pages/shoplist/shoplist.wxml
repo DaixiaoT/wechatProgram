@@ -10,6 +10,8 @@
     <text>地址：{{item.address}}</text>
 
   </view>
+  
 </view>
+<wemark md="\n\n ```cpp \n\n#include <stdio.h>\n\nint main(){\n\n\tprintf(\"hello world\");\n\n}\n\n ```" highlight="true" type="wemark"></wemark>
 
 <wxs src="../../utils/tools.wxs" module="tools"/>

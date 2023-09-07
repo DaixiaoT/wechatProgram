@@ -1,5 +1,7 @@
 {
-  "usingComponents": {},
+  "usingComponents": {
+    "wemark":"../../wemark/wemark"
+  },
   "onReachBottomDistance": 200,
   "enablePullDownRefresh": true,
   "backgroundColor": "#efefef",
