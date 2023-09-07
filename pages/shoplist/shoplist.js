@@ -19,6 +19,7 @@ Page({
     wx.showLoading({
       title: '数据加载中',
     })
+    // 
     wx.request({
       url: 'https://mock.presstime.cn/mock/64f2a6002b33b5907f433714/dxt/categories/' + this.data.query.id + '/shops',
       method: 'GET',

@@ -1,21 +1,39 @@
-
-<swiper indicator-dots indicator-color="white" circular>
-  <swiper-item wx:for="{{swiperList}}" wx:key="id">
+<swiper indicator-dots indicator-color="white" circular autoplay>
+  <!-- <swiper-item wx:for="{{swiperList}}" wx:key="id">
     <image src="{{item.image}}" mode=""/>
+  </swiper-item> -->
+  <swiper-item>
+    <image src="/images/shujujiegou.jpg" mode="heightFix" />
+  </swiper-item>
+  <swiper-item>
+    <image src="/images/jisuanjizuchengyuanli.jpg" mode="heightFix" />
+  </swiper-item>
+  <swiper-item>
+    <image src="/images/caozuoxitong.jpg" mode="heightFix" />
+  </swiper-item>
+  <swiper-item>
+    <image src="/images/jisuanjiwangluo.jpg" mode="heightFix" />
   </swiper-item>
 </swiper>
 <!-- 九宫格区域 -->
 <view class="grid-list">
-  <navigator class="grid-item" wx:for="{{gridList}}" wx:key="id" url="/pages/shoplist/shoplist?id={{item.id}}&title={{item.name}}">
+  <!-- <navigator class="grid-item" wx:for="{{gridList}}" wx:key="id" url="/pages/shoplist/shoplist?id={{item.id}}&title={{item.name}}">
     <image src="{{item.image}}" mode=""/>
     <text>{{item.name}}</text>
+  </navigator> -->
+  <navigator class="grid-item" url="">
+    <image src="/images/408.png" mode="" />
+    <text>408计算机基础</text>
   </navigator>
-
+  <navigator class="grid-item" url="/pages/linux/linux">
+    <image src="/images/linux.png" mode="" />
+    <text>linux入门手册</text>
+  </navigator>
+  <navigator class="grid-item" url="">
+    <image src="/images/embed.png" mode="" />
+    <text>嵌入式开发手册</text>
+  </navigator>
 </view>
-
 <view class="img-box">
-  <image src="/images/index2.png" mode="widthFix"/>
-  <image src="/images/index1.png" mode="widthFix"/>
+  
 </view>
-
-

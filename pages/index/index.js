@@ -11,43 +11,43 @@ Page({
     gridList:[]
   },
   //获取轮播图数据的方法
-  getSwiperList(){
-    wx.request({
-      url: 'https://mock.presstime.cn/mock/64f2a6002b33b5907f433714/dxt/slides',
-      method: 'GET',
-      success:(res)=>{
-        console.log(res)
-        this.setData({
-          swiperList:res.data
-        })
-      }
-    })
-  },
+  // getSwiperList(){
+  //   wx.request({
+  //     url: 'https://mock.presstime.cn/mock/64f2a6002b33b5907f433714/dxt/slides',
+  //     method: 'GET',
+  //     success:(res)=>{
+  //       console.log(res)
+  //       this.setData({
+  //         swiperList:res.data
+  //       })
+  //     }
+  //   })
+  // },
   //获取九宫格数据的方法
-  getGridList(){
-    wx.showLoading({
-      title: '数据加载中',
-    })
-    wx.request({
-      url: 'https://mock.presstime.cn/mock/64f2a6002b33b5907f433714/dxt/categories',
-      method: 'GET',
-      success:(res)=>{
-        console.log(res)
-        this.setData({
-          gridList:res.data
-        })
-      },
-      complete:()=>{
-        wx.hideLoading()
-      }
-    })
-  },
+  // getGridList(){
+  //   wx.showLoading({
+  //     title: '数据加载中',
+  //   })
+  //   wx.request({
+  //     url: 'https://mock.presstime.cn/mock/64f2a6002b33b5907f433714/dxt/categories',
+  //     method: 'GET',
+  //     success:(res)=>{
+  //       console.log(res)
+  //       this.setData({
+  //         gridList:res.data
+  //       })
+  //     },
+  //     complete:()=>{
+  //       wx.hideLoading()
+  //     }
+  //   })
+  // },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-    this.getSwiperList()
-    this.getGridList()
+    // this.getSwiperList()
+    // this.getGridList()
   },
 
   /**

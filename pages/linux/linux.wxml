@@ -1,0 +1,81 @@
+<!--pages/linux/linux.wxml-->
+<view class="top-tab flex-wrp flex-tab ">
+  <view class="toptab flex-item {{currentNavtab==idx ? 'active' : ''}}" wx:for="{{navTab}}" wx:for-index="idx" wx:for-item="itemName" data-idx="{{idx}}" bindtap="switchTab">
+    {{itemName}}
+  </view>
+</view>
+
+<scroll-view scroll-y="true" class="container discovery withtab" bindscrolltoupper="upper" bindscrolltolower="lower" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+  <view class="page0" hidden="{{currentNavtab==0 ? '' : true}}">
+    <view class="body">
+      <view class="widgets">
+        <view class="widgets__item">
+          <view id="view" class="widgets__info {{viewShow ? 'widgets__info_show' : ''}}" bindtap="widgetsToggle">
+            <text class="widgets__info-name">内容分区</text>
+            <image class="widgets__info-img" src="/images/edit-select.png" background-size="cover" />
+          </view>
+          <view class="widgets__list {{viewShow ? 'widgets__list_show' : ''}}">
+            <navigator url="component-pages/wx-view/wx-view" class="widget">
+              <text class="widget__name">view</text>
+              <image class="widget__arrow" src="/images/arrow.png" background-size="cover" />
+              <view class="widget__line"></view>
+            </navigator>
+            <navigator url="component-pages/wx-scroll-view/wx-scroll-view" class="widget">
+              <text class="widget__name">scroll-view</text>
+              <image class="widget__arrow" src="/images/arrow.png" background-size="cover" />
+              <view class="widget__line"></view>
+            </navigator>
+            <navigator url="component-pages/wx-swiper/wx-swiper" class="widget">
+              <text class="widget__name">swiper</text>
+              <image class="widget__arrow" src="/images/arrow.png" background-size="cover" />
+            </navigator>
+          </view>
+        </view>
+        <view class="widgets__item" wx:for="{{chapterList}}" wx:key="index">
+          <view id="{{item.name}}"  class="widgets__info {{viewShow ? 'widgets__info_show' : ''}}" bindtap="widgetsToggle" data-value="{{item.isSelected}}">
+            <text class="widgets__info-name">{{item.title}}</text>
+            <image class="widgets__info-img" src="/images/edit-select.png" background-size="cover" />
+          </view>
+          <view class="widgets__list {{contentShow ? 'widgets__list_show' : ''}}">
+            <navigator url="component-pages/wx-text/wx-text" class="widget">
+              <text class="widget__name">text</text>
+              <image class="widget__arrow" src="/images/arrow.png" background-size="cover" />
+              <view class="widget__line"></view>
+            </navigator>
+            <navigator url="component-pages/wx-icon/wx-icon" class="widget">
+              <text class="widget__name">icon</text>
+              <image class="widget__arrow" src="/images/arrow.png" background-size="cover" />
+              <view class="widget__line"></view>
+            </navigator>
+            <navigator url="component-pages/wx-mask/wx-mask" class="widget">
+              <text class="widget__name">mask</text>
+              <image class="widget__arrow" src="/images/arrow.png" background-size="cover" />
+              <view class="widget__line"></view>
+            </navigator>
+            <navigator url="component-pages/wx-toast/wx-toast" class="widget">
+              <text class="widget__name">toast</text>
+              <image class="widget__arrow" src="/images/arrow.png" background-size="cover" />
+              <view class="widget__line"></view>
+            </navigator>
+            <navigator url="component-pages/wx-progress/wx-progress" class="widget">
+              <text class="widget__name">progress</text>
+              <image class="widget__arrow" src="/images/arrow.png" background-size="cover" />
+            </navigator>
+          </view>
+        </view>
+        <button bindtap="get">asdfasdf</button>
+
+      </view>
+
+    </view>
+  </view>
+  <view class="page0" hidden="{{currentNavtab==1 ? '' : true}}">
+    <text>命令</text>
+  </view>
+  <view class="page0" hidden="{{currentNavtab==2 ? '' : true}}">
+    <text>书籍</text>
+  </view>
+  <view class="page0" hidden="{{currentNavtab==3 ? '' : true}}">
+    <text>经验</text>
+  </view>
+</scroll-view>

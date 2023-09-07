@@ -74,6 +74,10 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh() {
+    //展示loading效果
+    wx.showLoading({
+      title: '数据加载中',
+    })
     wx.request({
       url: 'https://mock.presstime.cn/mock/64f2a6002b33b5907f433714/dxt/color',
       method: 'get',
@@ -88,6 +92,7 @@ Page({
         this.setData({
           isloading: false
         })
+        wx.stopPullDownRefresh()
       }
     })
   },

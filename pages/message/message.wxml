@@ -1,2 +1,10 @@
 <!--pages/message/message.wxml-->
 <text>pages/message/message.wxml</text>
+<view class="shop-item" wx:for="{{MessageList}}" wx:key="id">
+  <view class="thumb">
+    <image src="{{item.image_url}}" mode="" />
+  </view>
+  <view class="info">
+    <navigator class="shop-title" url="/pages/detail/detail?WebviewS={{item.message_url}}">{{item.message_title}}</navigator>
+  </view>
+</view>

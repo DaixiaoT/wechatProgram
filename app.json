@@ -3,11 +3,12 @@
     "pages/index/index",
     "pages/message/message",
     "pages/contact/contact",
-    "pages/shoplist/shoplist"
+    "pages/shoplist/shoplist",
+    "pages/linux/linux"
   ],
   "window": {
     "backgroundTextStyle": "dark",
-    "navigationBarBackgroundColor": "#2b4b6b",
+    "navigationBarBackgroundColor": "#6e7f80",
     "navigationBarTitleText": "DXTTTT",
     "navigationBarTextStyle":"white",
     "enablePullDownRefresh": true,
@@ -24,7 +25,7 @@
       },
       {
         "pagePath": "pages/message/message",
-        "text": "信息",
+        "text": "一言",
         "iconPath": "/images/message.png",
         "selectedIconPath": "/images/message_select.png"
       },
