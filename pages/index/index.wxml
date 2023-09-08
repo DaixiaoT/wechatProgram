@@ -31,7 +31,7 @@
   </navigator>
   <navigator class="grid-item" url="">
     <image src="/images/embed.png" mode="" />
-    <text>嵌入式开发手册</text>
+    <text>嵌入式入门手册</text>
   </navigator>
 </view>
 <view class="img-box">

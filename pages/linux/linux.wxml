@@ -15,12 +15,12 @@
             <image class="widgets__info-img" src="/images/edit-select.png" background-size="cover" />
           </view>
           <view class="widgets__list  {{ item.viewShow ? 'widgets__list_show' : ''}}">
-            <navigator wx:for="{{item.smallChapterList}}" wx:key="smallChapter.id" wx:for-item="smallChapter"  url="{{smallChapter.url}}" class="widget">
+            <navigator wx:for="{{item.smallChapterList}}" wx:key="smallChapter.id" wx:for-item="smallChapter" url="{{smallChapter.url}}" class="widget">
               <text class="widget__name">{{smallChapter.title}}</text>
               <image class="widget__arrow" src="/images/arrow.png" background-size="cover" />
               <view class="widget__line"></view>
             </navigator>
-            
+
 
           </view>
         </view>
@@ -29,12 +29,39 @@
     </view>
   </view>
   <view class="page0" hidden="{{currentNavtab==1 ? '' : true}}">
-    <text>命令</text>
+    <view class="body">
+      <view class="widgets">
+        <view class="widgets__item" wx:for="{{commandList}}" wx:key="index">
+          <view id="{{item.id}}" class="widgets__info {{item.viewShow  ? 'widgets__info_show' : ''}}" bindtap="widgetsToggle_command" data-value="{{item.isSelected}}">
+            <text class="widgets__info-name">{{item.title}}</text>
+            <image class="widgets__info-img" src="/images/edit-select.png" background-size="cover" />
+          </view>
+          <view class="widgets__list  {{ item.viewShow ? 'widgets__list_show' : ''}}">
+            <navigator wx:for="{{item.smallChapterList}}" wx:key="smallChapter.id" wx:for-item="smallChapter" url="{{smallChapter.url}}" class="widget">
+              <text class="widget__name">{{smallChapter.title}}</text>
+              <image class="widget__arrow" src="/images/arrow.png" background-size="cover" />
+              <view class="widget__line"></view>
+            </navigator>
+
+
+          </view>
+        </view>
+        <button bindtap="get">asdfasdf</button>
+      </view>
+    </view>
   </view>
   <view class="page0" hidden="{{currentNavtab==2 ? '' : true}}">
-    <text>书籍</text>
+    <view class="">
+      <navigator id="{{item.id}}" bindtap="showUrl" wx:for="{{bookList}}" wx:key="item.id" url="{{item.url}}" class="widget">
+        <text class="widget__name">{{item.title}}</text>
+        <image class="widget__arrow" src="/images/arrow.png" background-size="cover" />
+        <view class="widget__line"></view>
+      </navigator>
+    </view>
   </view>
   <view class="page0" hidden="{{currentNavtab==3 ? '' : true}}">
-    <text>经验</text>
+    <view class="feed-item" wx:for="{{experienceList}}">
+      <wemark md="{{item.content}}" highlight="true" type="wemark"></wemark>
+    </view>
   </view>
 </scroll-view>

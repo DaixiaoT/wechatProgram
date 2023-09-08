@@ -5,10 +5,10 @@ Page({
    * 页面的初始数据
    */
   data: {
-    colorList: [],
+    me: {},
     isloading: false
   },
-  getColors() {
+  getMe() {
     this.setData({
       isloading: true
     })
@@ -17,12 +17,12 @@ Page({
       title: '数据加载中',
     })
     wx.request({
-      url: 'https://mock.presstime.cn/mock/64f2a6002b33b5907f433714/dxt/color',
+      url: 'https://mock.presstime.cn/mock/64f2a6002b33b5907f433714/linux/me',
       method: 'get',
       success: ({ data: res }) => {
         console.log(res)
         this.setData({
-          colorList: [...this.data.colorList, ...res.data]
+          me: res
         })
       },
       complete: () => {
@@ -39,7 +39,7 @@ Page({
    */
   onLoad(options) {
 
-    this.getColors()
+    this.getMe()
   },
 
   /**

@@ -20,13 +20,13 @@ Page({
       title: '数据加载中',
     })
     wx.request({
-      url: 'https://www.fastmock.site/mock/75790fd0727f52e50d5d0695131f448b/dxt/message',
+      url: 'https://mock.presstime.cn/mock/64f2a6002b33b5907f433714/linux/yiyan',
       method: 'GET',
       success: (res) => {
         console.log(res)
         this.setData({
           MessageList: [...this.data.MessageList, ...res.data],
-          total: res.data.length
+          // total: res.data.length
           
         })
       },

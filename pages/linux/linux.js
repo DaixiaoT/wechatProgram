@@ -10,7 +10,10 @@ Page({
     ],
     chapterList: [],
     isloading: false,
-    isSelect: false
+    isSelect: false,
+    commandList: [],
+    bookList: [],
+    experienceList: []
   },
 
 
@@ -40,6 +43,50 @@ Page({
     }
     this.setData(this.data);
   },
+  widgetsToggle_command: function (e) {
+    var id = e.currentTarget.id
+    console.log(id);
+    if (id === 'view') {
+      this.data.viewShow = !this.data.viewShow;
+      for (var i = 0, len = this.data.commandList.length; i < len; ++i) {
+        this.data.commandList[i].viewShow = false;
+      }
+    } else {
+      this.data.viewShow = false;
+      let num = id - 1;
+      this.data.commandList[num].viewShow = !this.data.commandList[num].viewShow;
+      console.log('data.commandList[num]', this.data.commandList[num].viewShow);
+      for (var i = 0, len = this.data.commandList.length; i < len; ++i) {
+        if (i !== num) {
+          this.data.commandList[i].viewShow = false;
+        }
+      }
+    }
+    this.setData(this.data);
+  },
+  showUrl: function (e) {
+    console.log(this.data.bookList);
+    var id = e.currentTarget.id
+    console.log(id);
+    var url = this.data.bookList[id - 1].url
+    // var url = e.currentTarget.url
+    // console.log(url);
+    wx.showModal({
+      title: '百度网盘链接,点击确定即可复制',
+      content: url,
+      complete: (res) => {
+        if (res.cancel) {
+
+        }
+
+        if (res.confirm) {
+          wx.setClipboardData({
+            data: url,
+          })
+        }
+      }
+    })
+  },
 
 
 
@@ -47,8 +94,10 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-
+    this.getCommands()
     this.getChapters()
+    this.getBooks()
+    this.getExperiences()
     console.log(this.data.currentNavtab);
   },
   getChapters() {
@@ -80,6 +129,90 @@ Page({
     })
 
 
+  },
+  getCommands() {
+    this.setData({
+      isloading: true
+    })
+    //展示loading效果
+    wx.showLoading({
+      title: '数据加载中',
+    })
+    wx.request({
+      url: 'https://mock.presstime.cn/mock/64f2a6002b33b5907f433714/linux/command/chapter',
+      method: 'get',
+      success: ({
+        data: res
+      }) => {
+
+        this.setData({
+          commandList: [...this.data.commandList, ...res]
+        })
+
+      },
+      complete: () => {
+        wx.hideLoading()
+        this.setData({
+          isloading: false
+        })
+      }
+    })
+  },
+  getBooks() {
+    this.setData({
+      isloading: true
+    })
+    //展示loading效果
+    wx.showLoading({
+      title: '数据加载中',
+    })
+    wx.request({
+      url: 'https://mock.presstime.cn/mock/64f2a6002b33b5907f433714/linux/book/list',
+      method: 'get',
+      success: ({
+        data: res
+      }) => {
+
+        this.setData({
+          bookList: [...this.data.bookList, ...res]
+        })
+
+      },
+      complete: () => {
+        wx.hideLoading()
+        this.setData({
+          isloading: false
+        })
+      }
+    })
+  },
+  getExperiences() {
+    this.setData({
+      isloading: true
+    })
+    //展示loading效果
+    wx.showLoading({
+      title: '数据加载中',
+    })
+    wx.request({
+      url: 'https://mock.presstime.cn/mock/64f2a6002b33b5907f433714/linux/experience/list',
+      method: 'get',
+      success: ({
+        data: res
+      }) => {
+
+        this.setData({
+          experienceList: [...this.data.experienceList, ...res]
+        })
+
+      },
+      complete: () => {
+        wx.hideLoading()
+        this.setData({
+          isloading: false
+        })
+      }
+    })
   },
 
   /**

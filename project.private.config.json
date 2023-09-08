@@ -5,6 +5,13 @@
       "list": [
         {
           "name": "",
+          "pathName": "pages/contact/contact",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
           "pathName": "pages/shoplist/shoplist",
           "query": "first=1&second=2",
           "launchMode": "default",

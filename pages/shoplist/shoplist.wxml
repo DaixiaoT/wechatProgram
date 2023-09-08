@@ -1,6 +1,6 @@
 <!--pages/shoplist/shoplist.wxml-->
 
-<view class="shop-item" wx:for="{{shopList}}" wx:key="id">
+<!-- <view class="shop-item" wx:for="{{shopList}}" wx:key="id">
   <view class="thumb">
     <image src="{{item.image}}" mode=""/>
   </view>
@@ -11,7 +11,7 @@
 
   </view>
   
+</view> -->
+<view class="shop-item">
+  <wemark md="{{detail}}" highlight="true" type="wemark"></wemark>
 </view>
-<wemark md="\n\n ```cpp \n\n#include <stdio.h>\n\nint main(){\n\n\tprintf(\"hello world\");\n\n}\n\n ```" highlight="true" type="wemark"></wemark>
-
-<wxs src="../../utils/tools.wxs" module="tools"/>

@@ -128,4 +128,31 @@
   background-color: #DFDFDF;
 }
 
+/* ------------------feed-item------------------------ */
+/* .container{
+  padding: 0;
+  font-size: 14rpx;
+  color: #000;
+} */
+.feed-item{
+  width: 690rpx;
+  padding: 30rpx 30rpx 20rpx;
+  margin: 7rpx 0 6rpx 0;
+  background: #ffffff;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  box-shadow: 0 4px 8px #dddddd;
+  word-spacing: normal;
+}
+
+
+
+
+
+
+
+
+
+
+
 

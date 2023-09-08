@@ -7,6 +7,7 @@ Page({
   data: {
     query: {},
     shopList: [],
+    detail:"",
     page: 1,
     pageSize: 10,
     total: 0,
@@ -24,14 +25,16 @@ Page({
       url: 'https://mock.presstime.cn/mock/64f2a6002b33b5907f433714/linux/recommend/book/' + this.data.query.first + '/'+this.data.query.second,
       method: 'GET',
       data: {
-        _page: this.data.page,
-        _limit: this.data.pageSize
+        // _page: this.data.page,
+        // _limit: this.data.pageSize
       },
       success: (res) => {
         console.log(res)
         this.setData({
-          shopList: [...this.data.shopList, ...res.data],
-          total: res.data.length
+          // shopList: [...this.data.shopList, ...res.data],
+          // query:res,
+          // total: res.data.length,
+          detail:res.data.detail
         })
       },
       complete: () => {
