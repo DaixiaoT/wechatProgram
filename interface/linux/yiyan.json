@@ -1,0 +1,21 @@
+[{
+    "id": 1,
+    "content": "我11开始做的，是实现单击事件，然后改变Boolean值checkFlag，去决定要不要显示这个文本。譬如我点击“查看文本”，checkFlag变为true，于是某个区域就显示了这个文本；我再次点击“查看文本”，checkFlag变为false，这个文本就被隐藏起来。",
+  },
+  {
+    "id": 2,
+    "content": "我22开始做的，是实现单击事件，然后改变Boolean值checkFlag，去决定要不要显示这个文本。譬如我点击“查看文本”，checkFlag变为true，于是某个区域就显示了这个文本；我再次点击“查看文本”，checkFlag变为false，这个文本就被隐藏起来。",
+  },
+  {
+    "id": 3,
+    "content": "我33开始做的，是实现单击事件，然后改变Boolean值checkFlag，去决定要不要显示这个文本。譬如我点击“查看文本”，checkFlag变为true，于是某个区域就显示了这个文本；我再次点击“查看文本”，checkFlag变为false，这个文本就被隐藏起来。",
+  },
+  {
+    "id": 4,
+    "content": "我44开始做的，是实现单击事件，然后改变Boolean值checkFlag，去决定要不要显示这个文本。譬如我点击“查看文本”，checkFlag变为true，于是某个区域就显示了这个文本；我再次点击“查看文本”，checkFlag变为false，这个文本就被隐藏起来。",
+  },
+
+
+
+
+]

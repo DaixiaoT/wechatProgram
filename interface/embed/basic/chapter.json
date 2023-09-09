@@ -1,0 +1,46 @@
+[{
+    "id": 1,
+    "title": "第一章",
+    "viewShow": false,
+    "smallChapterList": [{
+        "id": 1,
+        "title": "第一节",
+        "url": "/pages/embedBasicArtical/embedBasicArtical?first=1&second=1"
+      },
+      {
+        "id": 2,
+        "title": "第2节",
+        "url": "/pages/embedBasicArtical/embedBasicArtical?first=1&second=2"
+      },
+      {
+        "id": 3,
+        "title": "第3节",
+        "url": "/pages/embedBasicArtical/embedBasicArtical?first=1&second=3"
+      }
+
+    ]
+  },
+  {
+    "id": 2,
+    "title": "第2章",
+    "viewShow": false,
+    "smallChapterList": [{
+        "id": 1,
+        "title": "第21节",
+        "url": "/pages/embedBasicArtical/embedBasicArtical?first=2&second=1"
+      },
+      {
+        "id": 2,
+        "title": "第22节",
+        "url": "/pages/embedBasicArtical/embedBasicArtical?first=2&second=2"
+      },
+      {
+        "id": 3,
+        "title": "第23节",
+        "url": "/pages/embedBasicArtical/embedBasicArtical?first=2&second=3"
+      }
+
+    ]
+  }
+
+]
