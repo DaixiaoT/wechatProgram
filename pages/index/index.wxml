@@ -1,7 +1,7 @@
+
+<!-- 首页代码 -->
 <swiper indicator-dots indicator-color="white" circular autoplay>
-  <!-- <swiper-item wx:for="{{swiperList}}" wx:key="id">
-    <image src="{{item.image}}" mode=""/>
-  </swiper-item> -->
+  
   <swiper-item>
     <image src="/images/shujujiegou.jpg" mode="heightFix" />
   </swiper-item>
@@ -14,6 +14,9 @@
   <swiper-item>
     <image src="/images/jisuanjiwangluo.jpg" mode="heightFix" />
   </swiper-item>
+  <swiper-item>
+    <image src="/images/qianrushikaifa.jpg" mode="heightFix" />
+  </swiper-item>
 </swiper>
 <!-- 九宫格区域 -->
 <view class="grid-list">
@@ -21,7 +24,7 @@
     <image src="{{item.image}}" mode=""/>
     <text>{{item.name}}</text>
   </navigator> -->
-  <navigator class="grid-item" url="/wemark/wemark">
+  <navigator class="grid-item" url="/pages/computerBasic/computerBasic">
     <image src="/images/408.png" mode="" />
     <text>408计算机基础</text>
   </navigator>
@@ -29,7 +32,7 @@
     <image src="/images/linux.png" mode="" />
     <text>linux入门手册</text>
   </navigator>
-  <navigator class="grid-item" url="">
+  <navigator class="grid-item" url="/pages/embed/embed">
     <image src="/images/embed.png" mode="" />
     <text>嵌入式入门手册</text>
   </navigator>

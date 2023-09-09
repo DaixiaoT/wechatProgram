@@ -1,17 +1,28 @@
 <!--pages/contact/contact.wxml-->
+<!-- 导航栏我的界面 -->
 <view class="shop-item">
   <view class="thumb">
-    <image src="{{me.image}}" mode=""/>
+    <image src="{{me.image}}" mode="" />
   </view>
   <view class="info">
     <text class="shop-title">{{me.name}}</text>
-    <text>电  话：{{me.phone}}</text>
-    <text>签  名：{{me.gold}}</text>
+    <!-- <text>电 话：{{me.phone}}</text> -->
+    <text>签 名：{{me.gold}}</text>
   </view>
-  
+
 </view>
 <view class="shop-item">
   <wemark md="{{me.content}}" highlight="true" type="wemark"></wemark>
-  
-</view>
 
+</view>
+<view class="shop-item">
+  <view class="thumb">
+    <image src="../../images/Linux.jpg" alt="" />
+  </view>
+  <view class="info">
+    <text class="shop-title">Linux 入门手册</text>
+    <text>欢迎关注公众号</text>
+
+  </view>
+
+</view>

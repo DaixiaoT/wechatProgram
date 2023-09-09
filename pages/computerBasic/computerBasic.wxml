@@ -1,5 +1,5 @@
 <!--pages/linux/linux.wxml-->
-<!-- Linux入门手册模块 -->
+<!-- 408计算机基础模块 -->
 <view class="top-tab flex-wrp flex-tab ">
   <view class="toptab flex-item {{currentNavtab==idx ? 'active' : ''}}" wx:for="{{navTab}}" wx:for-index="idx" wx:for-item="itemName" data-idx="{{idx}}" bindtap="switchTab">
     {{itemName}}
@@ -10,7 +10,7 @@
   <view class="page0" hidden="{{currentNavtab==0 ? '' : true}}">
     <view class="body">
       <view class="widgets">
-        <view class="widgets__item" wx:for="{{chapterList}}" wx:key="index">
+        <view class="widgets__item" wx:for="{{DatastructureChapterList}}" wx:key="index">
           <view id="{{item.id}}" class="widgets__info {{item.viewShow  ? 'widgets__info_show' : ''}}" bindtap="widgetsToggle" data-value="{{item.isSelected}}">
             <text class="widgets__info-name">{{item.title}}</text>
             <image class="widgets__info-img" src="/images/edit-select.png" background-size="cover" />
@@ -32,8 +32,8 @@
   <view class="page0" hidden="{{currentNavtab==1 ? '' : true}}">
     <view class="body">
       <view class="widgets">
-        <view class="widgets__item" wx:for="{{commandList}}" wx:key="index">
-          <view id="{{item.id}}" class="widgets__info {{item.viewShow  ? 'widgets__info_show' : ''}}" bindtap="widgetsToggle_command" data-value="{{item.isSelected}}">
+        <view class="widgets__item" wx:for="{{OperateSystemChapterList}}" wx:key="index">
+          <view id="{{item.id}}" class="widgets__info {{item.viewShow  ? 'widgets__info_show' : ''}}" bindtap="widgetsToggle_oprateSystem" data-value="{{item.isSelected}}">
             <text class="widgets__info-name">{{item.title}}</text>
             <image class="widgets__info-img" src="/images/edit-select.png" background-size="cover" />
           </view>
@@ -52,17 +52,47 @@
     </view>
   </view>
   <view class="page0" hidden="{{currentNavtab==2 ? '' : true}}">
-    <view class="">
-      <navigator id="{{item.id}}" bindtap="showUrl" wx:for="{{bookList}}" wx:key="item.id" url="{{item.url}}" class="widget">
-        <text class="widget__name">{{item.title}}</text>
-        <image class="widget__arrow" src="/images/arrow.png" background-size="cover" />
-        <view class="widget__line"></view>
-      </navigator>
+    <view class="body">
+      <view class="widgets">
+        <view class="widgets__item" wx:for="{{ComputerNetworkChapterList}}" wx:key="index">
+          <view id="{{item.id}}" class="widgets__info {{item.viewShow  ? 'widgets__info_show' : ''}}" bindtap="widgetsToggle_computerNetwork" data-value="{{item.isSelected}}">
+            <text class="widgets__info-name">{{item.title}}</text>
+            <image class="widgets__info-img" src="/images/edit-select.png" background-size="cover" />
+          </view>
+          <view class="widgets__list  {{ item.viewShow ? 'widgets__list_show' : ''}}">
+            <navigator wx:for="{{item.smallChapterList}}" wx:key="smallChapter.id" wx:for-item="smallChapter" url="{{smallChapter.url}}" class="widget">
+              <text class="widget__name">{{smallChapter.title}}</text>
+              <image class="widget__arrow" src="/images/arrow.png" background-size="cover" />
+              <view class="widget__line"></view>
+            </navigator>
+
+
+          </view>
+        </view>
+        <button bindtap="get">asdfasdf</button>
+      </view>
     </view>
   </view>
   <view class="page0" hidden="{{currentNavtab==3 ? '' : true}}">
-    <view class="feed-item" wx:for="{{experienceList}}">
-      <wemark md="{{item.content}}" highlight="true" type="wemark"></wemark>
+    <view class="body">
+      <view class="widgets">
+        <view class="widgets__item" wx:for="{{ComputerOrganizationChapterList}}" wx:key="index">
+          <view id="{{item.id}}" class="widgets__info {{item.viewShow  ? 'widgets__info_show' : ''}}" bindtap="widgetsToggle_computerOrganization" data-value="{{item.isSelected}}">
+            <text class="widgets__info-name">{{item.title}}</text>
+            <image class="widgets__info-img" src="/images/edit-select.png" background-size="cover" />
+          </view>
+          <view class="widgets__list  {{ item.viewShow ? 'widgets__list_show' : ''}}">
+            <navigator wx:for="{{item.smallChapterList}}" wx:key="smallChapter.id" wx:for-item="smallChapter" url="{{smallChapter.url}}" class="widget">
+              <text class="widget__name">{{smallChapter.title}}</text>
+              <image class="widget__arrow" src="/images/arrow.png" background-size="cover" />
+              <view class="widget__line"></view>
+            </navigator>
+
+
+          </view>
+        </view>
+        <button bindtap="get">asdfasdf</button>
+      </view>
     </view>
   </view>
 </scroll-view>

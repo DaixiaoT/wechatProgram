@@ -28,6 +28,7 @@ swiper image{
   border-right: 1rpx solid #838282;
   border-bottom: 1rpx solid #838282;
   box-sizing: border-box;
+  padding: 10rpx;
 }
 .grid-item image{
   width: 160rpx;

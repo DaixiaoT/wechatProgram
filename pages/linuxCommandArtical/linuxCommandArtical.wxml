@@ -1,0 +1,4 @@
+<!--pages/computerBasicDataStructure/computerBasicDataStructure.wxml-->
+<view class="item">
+  <wemark md="{{detail}}" highlight="true" type="wemark"></wemark>
+</view>

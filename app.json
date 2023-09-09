@@ -4,7 +4,17 @@
     "pages/message/message",
     "pages/contact/contact",
     "pages/shoplist/shoplist",
-    "pages/linux/linux"
+    "pages/linux/linux",
+    "pages/computerBasic/computerBasic",
+    "pages/embed/embed",
+    "pages/linuxRecommendArtical/linuxRecommendArtical",
+    "pages/linuxCommandArtical/linuxCommandArtical",
+    "pages/computerBasicDataStructure/computerBasicDataStructure",
+    "pages/computerBasicOperateSystem/computerBasicOperateSystem",
+    "pages/computerBasicComputerNetwork/computerBasicComputerNetwork",
+    "pages/computerBasicComputerOrganization/computerBasicComputerOrganization",
+    "pages/embedBasicArtical/embedBasicArtical",
+    "pages/embedSeniorArtical/embedSeniorArtical"
   ],
   "window": {
     "backgroundTextStyle": "dark",

@@ -1,0 +1,9 @@
+/* pages/computerBasicDataStructure/computerBasicDataStructure.wxss */
+.item{
+  display: flex;
+  padding: 15rpx;
+  border: 1rpx solid #efefef;
+  border-radius: 8rpx;
+  margin: 15rpx;
+  box-shadow: 1rpx 1rpx 15rpx #ddd;
+}
