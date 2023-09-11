@@ -25,7 +25,6 @@
 
           </view>
         </view>
-        <button bindtap="get">asdfasdf</button>
       </view>
     </view>
   </view>
@@ -47,7 +46,6 @@
 
           </view>
         </view>
-        <button bindtap="get">asdfasdf</button>
       </view>
     </view>
   </view>
@@ -69,7 +67,6 @@
 
           </view>
         </view>
-        <button bindtap="get">asdfasdf</button>
       </view>
     </view>
   </view>
@@ -91,7 +88,6 @@
 
           </view>
         </view>
-        <button bindtap="get">asdfasdf</button>
       </view>
     </view>
   </view>
